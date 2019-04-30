@@ -143,6 +143,12 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+#静态文件目录
 STATICFILES_DIR = (
     os.path.join(BASE_DIR, 'static')
+)
+
+#登录验证方式
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
 )
