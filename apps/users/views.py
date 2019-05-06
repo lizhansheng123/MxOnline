@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.shortcuts import render
 from django.contrib.auth import authenticate,login
 
-from apps.users.models import UserProfile
+from users.models import UserProfile
 
 
 class CustomBackend(ModelBackend):
