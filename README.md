@@ -59,3 +59,5 @@ pip install -r ./requirements.txt
     - 修改图标方法: model类对应类中添加:model_icon = 'fa fa-user'，即'fa fa-'+icon名
 ```
 
+
+你大爷
