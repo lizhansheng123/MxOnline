@@ -41,6 +41,7 @@ class LoginView(View):
             return render(request, 'login.html', {'msg': '用户名或密码错误'})
 
 class RegisterView(View):
+
     '''用户注册'''
     def get(self,request):
        return render(request, 'register.html')
