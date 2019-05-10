@@ -1,18 +1,22 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
 <html>
- <head></head>
+<head>
+	<meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+	<title>慕学在线网登录</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+<!--
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+	-->
+</head>
  <body>
-  { % load staticfiles % } &lt; !DOCTYPE html &gt;
-  <meta charset="UTF-8" />
-  <meta name="renderer" content="webkit" />
-  <meta http="" -="" equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-  <title> 慕学在线网登录 &lt; /title&gt;
-	</title>
-  <link rel="stylesheet" type="text/css " href=" { % static 'css/reset.css' %
-}
-" />
-  <link rel="stylesheet " type="text / css " href=" { % static 'css/login.css' %
-}
-" />
+
   <form action="/login/" method="post" autocomplete="off">
                     <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
                     <div class="form-group marb20 ">

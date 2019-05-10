@@ -28,9 +28,9 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = ')dl-i_20t7106+5*t#=x=$j&b=lw)6jtpbz5&@s%^j)_qf96l+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -142,12 +142,15 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
 
 #静态文件目录
-STATICFILES_DIR = (
-    os.path.join(BASE_DIR, 'static')
-)
+STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
+                   ]
+
+TEMPLATE_DIRS = (os.path.join(BASE_DIR,'templates'),)
 
 #登录验证方式
 AUTHENTICATION_BACKENDS = (
