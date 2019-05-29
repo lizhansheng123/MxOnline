@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个注册表单</title>
+</head>
+<body>
+<h3>用户注册</h3>
+<form action="" method="post">
+    <p>
+<!--        label中for属性值等于input里面的ID属性值，就可以将label标签和input对话框绑定，点击lable就相当于点击了对话框。
+placeholder:隐性说明。maxlenght:最大输入的字符。autofocus:自动获取焦点-->
+        <label for="username">用户：</label>
+        <input type="text" id="username" name="username" placeholder="8个英文字母以内" maxlength="8" autofocus required>
+    </p>
+
+    <p>
+        <label for="password">密码：</label>
+        <input type="password" name="password" id="password" placeholder="6个字符以内" maxlength="6" required>
+    </p>
+
+    <p>
+        <label for="email">邮箱：</label>
+        <input type="email" name="email" id="email" placeholder="example@mail.com" required>
+    </p>
+
+    <p>
+        <label for="number">年龄：</label>
+        <input type="number" name="number" id="number" min="16" max="90" placeholder="16-90" required>
+    </p>
+
+    <p>
+        <label for="birthday">生日：</label>
+        <input type="date" name="birthday" id="birthday" required>
+    </p>
+    <p><!--课程 -->
+        <label for="course">课程：</label>
+        <select name="course" id="course" size="1" required>
+                       <option value="">请选择</option>
+            <optgroup label="主课">
+                     <option value="">请选择</option>
+                <option value="o">数学</option>
+                <option value="1">语文</option>
+                <option value="2">英语</option>
+            </optgroup>
+            <optgroup label="副科">
+                <option value="3">美术</option>
+                <option value="4">地理</option>
+                <option value="5">历史</option>
+            </optgroup>
+        </select>
+    </p>
+    <p><!--爱好 -->
+        <!--name属性输出时一个数组，所以需要中括号[],且一组复选框的name值应该相同，checked:默认选取-->
+        <label for="game">爱好：</label>
+        <input type="checkbox" name="checkbox[]" id="game"><label for="game">玩游戏</label>
+        <input type="checkbox" name="checkbox[]" id="programe"><label for="programe">写代码</label>
+        <input type="checkbox" name="checkbox[]" id="swiming"><label for="swiming">游泳</label>
+        <input type="checkbox" name="checkbox[]" id="ball"><label for="ball">打球</label><br />
+
+        <input type="checkbox" name="checkbox[]" id="cooking" checked><label for="cooking">做饭</label>
+    </p>
+
+    <p><!--性别 -->
+        <label for="gender">性别</label>
+        <input type="radio" name="radio" id="male" value="male"><label for="male">男性</label>
+        <input type="radio" name="radio" id="female" value="female"><label for="female">女性</label>
+        <input type="radio" name="radio" id="gender" value="gender" checked><label for="gender">保密</label>
+    </p>
+
+    <p><!--style="resize:none" 禁止拉伸-->
+        <label for="textarea">简介：</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10" style="resize:none" ></textarea>
+    </p>
+
+    <p><!--按钮 -->
+
+        <input type="submit" name="submit" value="提交">
+        <input type="reset" value="重置" name="reset"  >
+    </p>
+
+</form>
+</body>
+</html>

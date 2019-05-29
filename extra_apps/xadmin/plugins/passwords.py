@@ -15,7 +15,7 @@ class ResetPasswordSendView(BaseAdminView):
     need_site_permission = False
 
     password_reset_form = PasswordResetForm
-    password_reset_template = 'xadmin/auth/password_reset/form.html'
+    password_reset_template = 'xadmin/auth/password_reset/course_form.html'
     password_reset_done_template = 'xadmin/auth/password_reset/done.html'
     password_reset_token_generator = default_token_generator
 

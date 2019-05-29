@@ -23,16 +23,19 @@ import captcha
 import xadmin
 
 from MxOnline import settings
+from course.views import getForm
 from apps.users import views
 from apps.users.views import LoginView, RegisterView
+from test_formlist.views import getform
 
-urlpatterns = [
+urlpatterns = {
     path('xadmin/', xadmin.site.urls),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
     path('login/', LoginView.as_view(), name='login'),
-    path('register/',RegisterView.as_view(),name='register'),
-    #path('captcha/',include('captcha.urls')),
+    path('register/', RegisterView.as_view(), name='register'),
+    # path('captcha/',include('captcha.urls')),
     # url(r'^static/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root': settings.STATIC_URL }),
+    #path(r'form',getForm),
+    path(r'form', getform)
 
-
-]
+}

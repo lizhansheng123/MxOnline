@@ -28,7 +28,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = ')dl-i_20t7106+5*t#=x=$j&b=lw)6jtpbz5&@s%^j)_qf96l+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'operation',
     'xadmin',
     'crispy_forms',
-    'captcha'
+    'captcha',
+    'test_formlist'
 ]
 
 MIDDLEWARE = [
